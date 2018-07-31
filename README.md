@@ -327,9 +327,9 @@ destroy:
 
 Type | Description
 ---- | -----------
-[ap_zk_t](#ap-zk-t) | Shared per-cluster mod_zookeeper connection structure
-[ap_zk_watch_t](#ap-zk-watch-t) | Per-client mod_zookeeper watch structure
-[ap_zk_watcher_t](#ap-zk-watcher-t) | Watch callback function prototype
+[ap_zk_t](#ap_zk_t) | Shared per-cluster mod_zookeeper connection structure
+[ap_zk_watch_t](#ap_zk_watch_t) | Per-client mod_zookeeper watch structure
+[ap_zk_watcher_t](#ap_zk_watcher_t) | Watch callback function prototype
 
 
 #### ap_zk_t
@@ -437,14 +437,14 @@ typedef void (ap_zk_watcher_t)(zhandle_t *handle, int type, int state,
 
 Function | Description
 -------- | -----------
-[ap_zk_acquire](#ap-zk-acquire) | Acquire shared lock and active ZooKeeper handle
-[ap_zk_tryacquire](#ap-zk-tryacquire) | Attempt to acquire shared lock and active ZooKeeper handle
-[ap_zk_release](#ap-zk-release) | Release shared lock and ZooKeeper handle
-[ap_zk_lookup](#ap-zk-lookup) | Check if ZooKeeper connection is registered
-[ap_zk_error](#ap-zk-error) | Log an error from a failed ZooKeeper method
-[ap_zk_watcher](#ap-zk-watcher) | ZooKeeper callback function to signal watch monitor
-[ap_zk_create_watch](#ap-zk-create-watch) | Initialize mod_zookeeper watch monitor
-[ap_zk_destroy_watch](#ap-zk-destroy-watch) | Destroy mod_zookeeper watch monitor
+[ap_zk_acquire](#ap_zk_acquire) | Acquire shared lock and active ZooKeeper handle
+[ap_zk_tryacquire](#ap_zk_tryacquire) | Attempt to acquire shared lock and active ZooKeeper handle
+[ap_zk_release](#ap_zk_release) | Release shared lock and ZooKeeper handle
+[ap_zk_lookup](#ap_zk_lookup) | Check if ZooKeeper connection is registered
+[ap_zk_error](#ap_zk_error) | Log an error from a failed ZooKeeper method
+[ap_zk_watcher](#ap_zk_watcher) | ZooKeeper callback function to signal watch monitor
+[ap_zk_create_watch](#ap_zk_create_watch) | Initialize mod_zookeeper watch monitor
+[ap_zk_destroy_watch](#ap_zk_destroy_watch) | Destroy mod_zookeeper watch monitor
 
 
 #### ap_zk_acquire
