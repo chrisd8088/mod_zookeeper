@@ -402,6 +402,15 @@ static void ap_zk_watcher(zhandle_t *handle, int type, int state,
     int count;
     apr_status_t status;
 
+    /* watchers may receive multiple session events before node event */
+    if (type == ZOO_SESSION_EVENT) {
+        if (watch->watcher) {
+            watch->watcher(handle, type, state, path, watch->context);
+        }
+
+        return;
+    }
+
     status = apr_thread_mutex_lock(watch->mutex);
 
     if (status != APR_SUCCESS) {
